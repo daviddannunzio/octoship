@@ -24,7 +24,7 @@ func main() {
         fmt.Printf("No user was found for this token")
     } else {
 
-        fmt.Printf("User %s is %s a member of team %d", u.Email, success, team)
+        fmt.Printf("User %s %s a member of team %d", u.Email, success, team)
     }
 }
 
