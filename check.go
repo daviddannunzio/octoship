@@ -31,6 +31,12 @@ func Check(token string, team int) (u *github.User, err error) {
 
 	u, _, e := client.Users.Get(ctx, "")
 
+	if u == nil {
+		return nil, &ErrNotMember{
+			Errors: []error{e},
+		}
+	}
+
 	// list all repositories for the authenticated user
 	ok, _, er := client.Organizations.IsTeamMember(ctx, team, *u.Login)
 
