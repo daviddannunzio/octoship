@@ -10,7 +10,7 @@ import (
 func ExampleCheck() {
 	token := "a github token"
 	// a team to check membership for
-	team := 1337
+	team := int64(1337)
 
 	u, err := octoship.Check(token, team)
 	success := "is"
@@ -23,7 +23,7 @@ func ExampleCheck() {
 		fmt.Printf("No user was found for this token")
 	} else {
 
-		fmt.Printf("User %s is %s a member of team %d", u.Email, success, team)
+		fmt.Printf("User %s is %s a member of team %d", *u.Email, success, team)
 	}
 	//Output: No user was found for this token
 }
@@ -33,7 +33,7 @@ func Test_Check(t *testing.T) {
 
 	cases := map[string]struct {
 		t  string
-		tm int
+		tm int64
 		e  error
 	}{
 		"good": {

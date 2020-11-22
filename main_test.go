@@ -11,7 +11,7 @@ import (
 )
 
 var token string
-var team int
+var team int64
 
 func TestMain(m *testing.M) {
 	flag.StringVar(&token, "token", "", "a valid personal github token for use in testing")
@@ -26,7 +26,7 @@ func TestMain(m *testing.M) {
 	client := github.NewClient(tc)
 
 	// list all repositories for the authenticated user
-	teams, _, err := client.Organizations.ListUserTeams(ctx, nil)
+	teams, _, err := client.Teams.ListUserTeams(ctx, nil)
 
 	if err != nil || len(teams) < 1 {
 		panic("no teams for token")

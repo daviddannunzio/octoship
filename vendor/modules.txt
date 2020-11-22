@@ -1,0 +1,25 @@
+# github.com/golang/protobuf v0.0.0-20170217234432-69b215d01a56
+## explicit
+github.com/golang/protobuf/proto
+# github.com/google/go-github v17.0.0+incompatible
+## explicit
+github.com/google/go-github/github
+# github.com/google/go-querystring v0.0.0-20170111101155-53e6ce116135
+## explicit
+github.com/google/go-querystring/query
+# golang.org/x/net v0.0.0-20170303215036-d379faa25cbd
+## explicit
+golang.org/x/net/context
+# golang.org/x/oauth2 v0.0.0-20170302202304-efb10a30610e
+## explicit
+golang.org/x/oauth2
+golang.org/x/oauth2/internal
+# google.golang.org/appengine v1.0.1-0.20170303155157-5403c08c6e8f
+## explicit
+google.golang.org/appengine/internal
+google.golang.org/appengine/internal/base
+google.golang.org/appengine/internal/datastore
+google.golang.org/appengine/internal/log
+google.golang.org/appengine/internal/remote_api
+google.golang.org/appengine/internal/urlfetch
+google.golang.org/appengine/urlfetch
