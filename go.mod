@@ -1,4 +1,4 @@
-module github.com/whytheplatypus/octoship
+module github.com/daviddannunzio/octoship
 
 go 1.15
 

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/whytheplatypus/octoship"
+	"github.com/daviddannunzio/octoship"
 )
 
 func ExampleCheck() {
