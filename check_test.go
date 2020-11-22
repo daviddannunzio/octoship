@@ -12,7 +12,7 @@ func ExampleCheck() {
 	// a team to check membership for
 	team := int64(1337)
 
-	u, err := octoship.Check(token, team)
+	u, err := octoship.Check(token, int(team))
 	success := "is"
 
 	if err != nil {
@@ -56,7 +56,7 @@ func Test_Check(t *testing.T) {
 	for k, c := range cases {
 		t.Logf("Running case %s", k)
 
-		u, err := octoship.Check(c.t, c.tm)
+		u, err := octoship.Check(c.t, int(c.tm))
 
 		if err == nil && c.e != nil {
 			t.Fatalf("case %s expected non-nil error", k)

@@ -20,7 +20,7 @@ func (e *ErrNotMember) Error() string {
 
 // Check determines if a user, identified by the token, is a member of the given team.
 // If they are not both an error and any user information that was attainable is returned.
-func Check(token string, team int64) (u *github.User, err error) {
+func Check(token string, team int) (u *github.User, err error) {
 	ctx := context.Background()
 	ts := oauth2.StaticTokenSource(
 		&oauth2.Token{AccessToken: token},
